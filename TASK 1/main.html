@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Need for Speed Fan Site</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <header>
+        <div class="hero">
+            <video autoplay muted loop id="bg-video">
+                <source src="NFS/nfs-hero.MP4" type="video/mp4">
+            </video>
+            <div class="hero-text">
+                <h1>Welcome to Need for Speed</h1>
+                <p>Your ultimate destination for all things NFS</p>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="games.html">Games Overview</a></li>
+            <li><a href="cars.html">Car List</a></li>
+            <li><a href="multi.html">Multimedia</a></li>
+        </ul>
+    </nav>
+
+    <section class="section">
+        <div class="card-grid">
+            <div class="card" onclick="location.href='games.html'">
+                <img src="game.jpg" alt="Games">
+                <h3>Explore Games</h3>
+                <p>Dive into the world of Need for Speed games, from classics to the latest releases.</p>
+            </div>
+            <div class="card" onclick="location.href='cars.html'">
+                <img src="car.jpg" alt="Cars">
+                <h3>View Car List</h3>
+                <p>Check out the most iconic cars in the Need for Speed series.</p>
+            </div>
+            <div class="card" onclick="location.href='multi.html'">
+                <img src="gif.gif" alt="Cars">
+                <h3>View Multimedia List</h3>
+                <p>Check out the most iconic trailers in the Need for Speed series.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <h2>Contact & Feedback</h2>
+        <form id="contact-form">
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+            <input type="email" id="email" name="email" placeholder="Your Email" required>
+            <textarea id="message" name="message" rows="5" placeholder="Your Feedback" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Need for Speed. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+        alert('Thank you for your feedback!');
+    });
+    </script>
+</body>
+</html>

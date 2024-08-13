@@ -1,0 +1,236 @@
+body {
+    font-family: 'Orbitron', sans-serif;
+    background-color: #0d0d0d;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+header {
+    background: #0d0d0d;
+    padding: 1em 0;
+    border-bottom: 1px solid #1f1f1f;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo a {
+    color: #0ff;
+    text-decoration: none;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-shadow: 0 0 5px #0ff, 0 0 10px #0ff;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    margin: 0 1em;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    text-shadow: 0 0 5px #f0f, 0 0 10px #f0f;
+}
+
+header .contact-info {
+    display: flex;
+    align-items: center;
+}
+
+header .contact-info a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 1em;
+    text-shadow: 0 0 5px #ff0, 0 0 10px #ff0;
+}
+
+header .contact-info .btn {
+    background: #f0f;
+    padding: 0.5em 1em;
+    border: none;
+    color: #fff;
+    text-decoration: none;
+    margin-left: 1em;
+    border-radius: 5px;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff;
+    transition: background 0.3s;
+}
+
+header .contact-info .btn:hover {
+    background: #0ff;
+    text-shadow: 0 0 5px #0ff, 0 0 10px #0ff;
+}
+
+/* Hero Section */
+
+.hero {
+    background: url('path-to-background.jpg') no-repeat center center/cover;
+    color: #fff;
+    text-align: center;
+    padding: 5em 0;
+    position: relative;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin: 0.5em 0;
+    text-shadow: 0 0 10px #f0f, 0 0 20px #f0f;
+    position: relative;
+    z-index: 1;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin: 1em 0;
+    position: relative;
+    z-index: 1;
+}
+
+.hero .cta a {
+    background: #f0f;
+    padding: 0.5em 1em;
+    border: none;
+    color: #fff;
+    text-decoration: none;
+    margin: 0 0.5em;
+    border-radius: 5px;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff;
+    transition: background 0.3s;
+    position: relative;
+    z-index: 1;
+}
+
+.hero .cta a:hover {
+    background: #0ff;
+    text-shadow: 0 0 5px #0ff, 0 0 10px #0ff;
+}
+
+/* Services Section */
+
+.services {
+    background: #1f1f1f;
+    padding: 3em 0;
+    text-align: center;
+}
+
+.services h2 {
+    font-size: 2em;
+    margin-bottom: 1em;
+    text-shadow: 0 0 5px #f0f, 0 0 10px #f0f;
+}
+
+.services .service-box {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.services .service {
+    background: #0d0d0d;
+    padding: 1em;
+    margin: 1em;
+    border-radius: 5px;
+    width: 30%;
+    box-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
+    transition: transform 0.3s;
+}
+
+.services .service:hover {
+    transform: translateY(-10px);
+}
+
+.services .service img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 1em;
+}
+
+.services .service h3 {
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+    text-shadow: 0 0 5px #f0f, 0 0 10px #f0f;
+}
+
+.services .service p {
+    font-size: 1em;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff;
+}
+
+/* About Us Section */
+
+.about-us {
+    background: #0d0d0d;
+    padding: 3em 0;
+    text-align: center;
+}
+
+.about-us h2 {
+    font-size: 2em;
+    margin-bottom: 1em;
+    text-shadow: 0 0 5px #f0f, 0 0 10px #f0f;
+}
+
+.about-us .content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.about-us .content p {
+    width: 60%;
+    margin: 0 auto;
+    font-size: 1.2em;
+    margin-bottom: 1em;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff;
+}
+
+.about-us .content img {
+    width: 30%;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
+}
+
+.about-us .btn {
+    background: #f0f;
+    padding: 0.5em 1em;
+    border: none;
+    color: #fff;
+    text-decoration: none;
+    margin-top: 1em;
+    border-radius: 5px;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff;
+    transition: background 0.3s;
+}
+
+.about-us .btn:hover {
+    background: #0ff;
+    text-shadow: 0 0 5px #0ff, 0 0 10px #0ff;
+}

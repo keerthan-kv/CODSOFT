@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title> PORSCHE </title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Helvetica Black Condensed';
+        }
+
+        #image-container {
+            position: fixed;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            z-index: -1;
+        }
+
+        #image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        #overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.437);
+            color: #fff;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        #header {
+            position: relative;
+            padding: 20px;
+            color: white;
+            text-align: center;
+            z-index: 1;
+            background-color: black;
+        }
+
+        #header img {
+            position: absolute;
+            top: 10px;
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
+        }
+
+        #header img.left {
+            left: 20px;
+            width: 67px;
+            height: 80px;
+        }
+
+        #header img.right {
+            right: 40px;
+            width: 108px;
+            height: 90px;
+        }
+
+        #text-lines {
+            color: white;
+            text-align: left;
+            padding: 20px;
+            margin-top: 300px;
+        }
+
+        #text-lines p {
+            margin: 0;
+            line-height: 1.5;
+        }
+
+        #view-spec-button {
+            display: inline-block;
+            padding: 15px 30px;
+            background: black;
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+            cursor: pointer;
+            margin-top: 40px;
+            margin-bottom: 100px    ;
+        }
+
+        #image-gallery {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 150px;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            margin: 10px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+            border-radius: 5px;
+        }
+
+        .gallery-item img {
+            width: 300px;
+            height: auto;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .gallery-text {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            padding: 5px;
+            background: rgba(23, 22, 22, 0.7);
+            color: white;
+            text-align: center;
+        }
+
+        #text-box {
+            background: black;
+            color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+            margin-top: 20px;
+        }
+
+        #car-specifications {
+            margin-top: 20px;
+           
+            border-collapse: collapse;
+            width: 90%;
+            margin: 0 auto;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        #car-specifications th,
+        #car-specifications td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid white;
+            color: white;
+        }
+
+        #car-specifications th {
+            background: rgba(0, 0, 0, 0.455);
+        }
+
+        #navigate-button {
+            display: inline-block;
+            width: 150px;
+            height: 50px;
+            background: black;
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+            border: none;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+            cursor: pointer;
+            margin-top: 20px;
+            margin-bottom: 100px;
+            margin-left: auto;
+            text-align: center;
+            line-height: 40px;
+        }
+
+        /* Footer Styles */
+        #footer {
+            background: black;
+            color: white;
+            text-align: center;
+            margin-top: 20px;
+            padding: 20px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="image-container">
+        <img id="image" src="por_bc.jpeg" alt="Background Image">
+        <div id="overlay"></div>
+    </div>
+
+    <div id="header">
+        <img src="por_logo.png" alt="Left Logo" class="left">
+        <img src="por_logo2.png" alt="Right Logo" class="right">
+        <h1>1973 PORSCHE 911 Carrera RS 2.7 Touring </h1>
+    </div>
+
+    <div id="text-lines">
+        <p style="font-size: 40px;">The perfect race car crosses the finish line first and <br> then crumbles into its individual parts.</p>
+        <p style="font-size: 20px;">Full spectrum</p>
+        <p style="font-size: 20px;">Full synergy</p>
+        <p style="font-size: 20px;"> It's a passion</p>
+    </div>
+
+    <a href="#8" id="view-spec-button">View Specifications ↓</a>
+
+    <div id="image-gallery">
+        <!-- Add images for the gallery -->
+        <div class="gallery-item">
+            <img src="por_imp.png" alt="Gallery 1">
+            <div class="gallery-text";>The Carrera RS 2.7 had distinctive "ducktail" rear spoiler for improved aerodynamics.
+                The car was available in various vibrant and iconic colors, and some units featured contrasting-colored "Carrera" graphics on the sides.</div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="por_chss.png" alt="Gallery 2">
+            <div class="gallery-text";>Total units produced: Approximately 1,580 (approximately 500 of these were the lightweight M471 "Touring" version, and the rest were the M472 "Lightweight" version)</div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="por_engi.jpeg" alt="Gallery 4">
+            <div class="gallery-text";>The 2.7 RS Touring (M472 option) featured mechanical fuel injection (MFI) and produced around 210 horsepower, but some sources suggest it could reach up to 220 horsepower. 0 to 60 mph in around 5.5 seconds (approximate).  Approximately 150 mph (240 km/h)</div>
+        </div>
+        <div class="gallery-item">
+            <img src="por_int.jpg" alt="Gallery 4">
+            <div class="gallery-text";>Lightweight: The Carrera RS 2.7 was known for its lightweight construction, which included features like thinner glass, no rear seats, and simplified interior elements.
+                Sport Seats: The Carrera RS was equipped with sport seats for enhanced driver support during spirited driving.</div>
+        </div>
+
+        <!-- Add more gallery items as needed -->
+    </div>
+
+    <br><br>
+
+    <table id="car-specifications">
+        <tr>
+            <th>Feature</th>
+            <th>Specification</th>
+        </tr>
+        <tr>
+            <td>Engine</td>
+            <td>Type: V12<br>
+Configuration: Mid-mounted transverse<br>
+Displacement: 3.9 liters (3929 cc)<br>
+Power: Approximately 350 horsepower<br>
+Torque: Notable, though specific figures may vary</td>
+        </tr>
+        <tr>
+            <td>Performance:</td>
+            <td>Top Speed: Approximately 280 km/h (174 mph)<br>
+                0 to 60 mph: Approximately 6.7 seconds<br>
+                Quarter-mile time: Approximately 14.8 seconds
+            </td>
+        </tr>
+        <tr>
+        <td>Chassis and Body:</td>
+        <td>Frame: Steel tubular frame with a lightweight aluminum body<br>
+            Suspension: Independent suspension with double wishbones, coil springs, and hydraulic shock absorbers
+        </td>
+        </tr>
+        <tr>
+            <td>Suspension:</td>
+            <td>Frame: Steel tubular frame with a lightweight aluminum body<br>
+                Suspension: Independent suspension with double wishbones, coil springs, and hydraulic shock absorbers
+            </td>
+            </tr>
+                <tr>
+                    <td>Dimensions:</td>
+                    <td>
+                        Length: Approximately 4.38 meters (172.4 inches)<br>
+                        Width: Approximately 1.76 meters (69.3 inches)<br>
+                        Height: Approximately 1.05 meters (41.3 inches)<br>
+                        Wheelbase: Approximately 2.50 meters (98.4 inches)<br>
+                        Weight: Approximately 1,125 kg (2,480 lbs)<br>
+                    </td>
+                    </tr>
+
+        
+
+        <!-- Add more rows as needed -->
+    </table>
+
+    <br><br><br><br>
+
+    <button id="navigate-button" onclick="window.location.href='forms.html'">TEST DRIVE</button>
+
+    <div id="footer">
+        &copy; 2024 DREAMDRIVE. All rights reserved.
+    </div>
+
+    <script>
+        var currentImage = 0;
+
+        function showImage(index) {
+            var images = document.querySelectorAll("#image-gallery img");
+            images[currentImage].style.transform = "scale(1)";
+            currentImage = (index + images.length) % images.length;
+            images[currentImage].style.transform = "scale(1.1)";
+        }
+
+        function nextImage() {
+            showImage(currentImage + 1);
+        }
+
+        function prevImage() {
+            showImage(currentImage - 1);
+        }
+    </script>
+
+</body>
+
+</html>

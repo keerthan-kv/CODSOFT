@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Need for Speed - Car Categories</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <header>
+        <div class="hero">
+            <video autoplay muted loop id="bg-video">
+                <source src="CAR/CARSS.mp4" type="video/mp4">
+            </video>
+            <div class="hero-text">
+                <h1>Car Categories</h1>
+                <p>Explore the diverse range of cars in NFS</p>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="main.html">Home</a></li>
+            <li><a href="games.html">Games Overview</a></li>
+            <li><a href="cars.html">Car List</a></li>
+            <li><a href="multi.html">Multimedia</a></li>
+        </ul>
+    </nav>
+
+    <section id="car-categories" class="section">
+        <h2>Car Categories</h2>
+        <div class="car-grid">
+            <div class="car-card" data-category="Exotic Cars">
+                <img src="car/exotic.jpg" alt="Exotic Cars">
+                <h3>Exotic Cars</h3>
+            </div>
+            <div class="car-card" data-category="Sports Cars">
+                <img src="car/sports.jpg" alt="Sports Cars">
+                <h3>Sports Cars</h3>
+            </div>
+            <div class="car-card" data-category="Muscle Cars">
+                <img src="car/muscle.jpg" alt="Muscle Cars">
+                <h3>Muscle Cars</h3>
+            </div>
+            <div class="car-card" data-category="Supercars">
+                <img src="car/super.jpg" alt="Supercars">
+                <h3>Supercars</h3>
+            </div>
+            <div class="car-card" data-category="Hypercars">
+                <img src="car/hyper.jpg" alt="Hypercars">
+                <h3>Hypercars</h3>
+            </div>
+            <div class="car-card" data-category="Tuner Cars">
+                <img src="car/tuner.jpg" alt="Tuner Cars">
+                <h3>Tuner Cars</h3>
+            </div>
+            <div class="car-card" data-category="Rally Cars">
+                <img src="car/rally.jpg" alt="Rally Cars">
+                <h3>Rally Cars</h3>
+            </div>
+            <div class="car-card" data-category="SUVs and Off-Road Vehicles">
+                <img src="car/suv.jpg" alt="SUVs and Off-Road Vehicles">
+                <h3>SUVs & Off-Road</h3>
+            </div>
+            <div class="car-card" data-category="Classic Cars">
+                <img src="car/classic.jpg" alt="Classic Cars">
+                <h3>Classic Cars</h3>
+            </div>
+            <div class="car-card" data-category="Electric Cars">
+                <img src="car/electric.jpg" alt="Electric Cars">
+                <h3>Electric Cars</h3>
+            </div>
+        </div>
+    </section>
+
+    <div id="popup-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h3 id="modal-title"></h3>
+            <div id="modal-images" class="modal-images">
+            </div>
+            <p id="modal-description"></p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Need for Speed. All Rights Reserved.</p>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>

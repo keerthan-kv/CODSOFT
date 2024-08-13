@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multimedia - Need for Speed Fan Site</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <header>
+        <div class="hero">
+            <video autoplay muted loop id="bg-video">
+                <source src="NFS/nfs-hero.MP4" type="video/mp4">
+            </video>
+            <div class="hero-text">
+                <h1>Multimedia</h1>
+                <p>Watch trailers, gameplay videos, and fan-made content</p>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="main.html">Home</a></li>
+            <li><a href="games.html">Games Overview</a></li>
+            <li><a href="cars.html">Car List</a></li>
+            <li><a href="multimedia.html">Multimedia</a></li>
+        </ul>
+    </nav>
+
+    <section id="videos" class="section">
+        <h2>Need for Speed Videos</h2>
+        <div class="video-list">
+            <div class="video-item">
+                <video src="GAMES-PLAYBACK/NFS POE.mp4" controls></video>
+                <p>Need for Speed: Porsche Unleashed (2000)</p>
+            </div>
+            <div class="video-item">
+                <video src="GAMES-PLAYBACK/NFS UG2.mp4" controls></video>
+                <p>Need for Speed: Underground 2 (2004)</p>
+            </div>
+            <div class="video-item">
+                <video src="GAMES-PLAYBACK/NFS MW.mp4" controls></video>
+                <p>Need for Speed: Most Wanted (2005)</p>
+            </div>
+            <div class="video-item">
+                <video src="GAMES-PLAYBACK/NFS RIV.mp4" controls></video>
+                <p>Need for Speed: Rivals (2013)</p>
+            </div>
+            <div class="video-item">
+                <video src="GAMES-PLAYBACK/NFS NL.webM" controls></video>
+                <p>TNeed for Speed: No Limits (2015)</p>
+            </div>
+            <div class="video-item">
+                <video src="GAMES-PLAYBACK/NFS PB.mp4" controls></video>
+                <p>Need for Speed: Payback (2017)</p>
+            </div>
+            <div class="video-item">
+                <video src="GAMES-PLAYBACK/NFS HEAT.mp4" controls></video>
+                <p>Need for Speed: Heat (2019)</p>
+            </div>
+            <div class="video-item">
+                <video src="GAMES-PLAYBACK/NFS REM.mp4" controls></video>
+                <p>Need for Speed: Hot Pursuit Remastered (2020)</p>
+            </div>
+            <div class="video-item">
+                <video src="GAMES-PLAYBACK/NFS UB.mp4" controls></video>
+                <p>Need for Speed Unbound (2022)</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Need for Speed. All Rights Reserved.</p>
+    </footer>
+
+    <script src="main.js">
+        document.addEventListener('DOMContentLoaded', () => {
+            // Select all video elements within the multimedia section
+            const videos = document.querySelectorAll('#videos video');
+        
+            // Iterate over each video element
+            videos.forEach(video => {
+                // Add an event listener to each video that triggers on play
+                video.addEventListener('play', () => {
+                    // Pause all other videos
+                    videos.forEach(otherVideo => {
+                        if (otherVideo !== video) {
+                            otherVideo.pause();
+                        }
+                    });
+                });
+            });
+        });
+        
+        
+    </script>
+</body>
+</html>

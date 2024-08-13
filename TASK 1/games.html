@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Need for Speed - Games Overview</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <header>
+        <div class="hero">
+            <video autoplay muted loop id="bg-video">
+                <source src="GAMES-PLAYBACK/NFS BACK.mp4" type="video/mp4">
+            </video>
+            <div class="hero-text">
+                <h1>Games Overview</h1>
+                <p>Discover the legacy of Need for Speed games</p>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="main.html">Home</a></li>
+            <li><a href="games.html">Games Overview</a></li>
+            <li><a href="cars.html">Car List</a></li>
+            <li><a href="multi.html">Multimedia</a></li>
+        </ul>
+    </nav>
+
+    <section id="games" class="section">
+        <h2>Games Overview</h2>
+        <div class="game-grid">
+            <div class="game-card" data-video="GAMES-PLAYBACK/NFS POE.mp4" data-text="A unique installment focusing on the legacy of Porsche with realistic car physics and an immersive career mode.">
+                <img src="NFS/NFS POE.webp" alt="Porsche Unleashed">
+                <h3>Need for Speed: Porsche Unleashed (2000)</h3>
+                <p>A unique installment focusing on the legacy of Porsche with realistic car physics and an immersive career mode.</p>
+            </div>
+            <div class="game-card" data-video="GAMES-PLAYBACK/NFS UG2.mp4" data-text="Dive into the world of street racing with extensive customization options and an open-world environment.">
+                <img src="NFS/NFS UG.jpg" alt="Underground 2">
+                <h3>Need for Speed: Underground 2 (2004)</h3>
+                <p>Dive into the world of street racing with extensive customization options and an open-world environment.</p>
+            </div>
+            <div class="game-card" data-video="GAMES-PLAYBACK/NFS MW.mp4" data-text="Outrun the cops in high-speed pursuits while building your reputation in this iconic racer.">
+                <img src="NFS/NFS-MW.jpg" alt="Most Wanted">
+                <h3>Need for Speed: Most Wanted (2005)</h3>
+                <p>Outrun the cops in high-speed pursuits while building your reputation in this iconic racer.</p>
+            </div>
+            <div class="game-card" data-video="GAMES-PLAYBACK/NFS RIV.mp4" data-text="Choose your side as a cop or racer in this intense open-world battle for dominance.">
+                <img src="NFS/NFS RIV.jpg" alt="Rivals">
+                <h3>Need for Speed: Rivals (2013)</h3>
+                <p>Choose your side as a cop or racer in this intense open-world battle for dominance.</p>
+            </div>
+            <div class="game-card" data-video="GAMES-PLAYBACK/NFS NL.webM" data-text="Conquer the streets with custom cars and high-speed racing action, optimized for mobile gaming.">
+                <img src="NFS/NFS NO LIMS.jpg" alt="No Limits">
+                <h3>Need for Speed: No Limits (2015)</h3>
+                <p>Conquer the streets with custom cars and high-speed racing action, optimized for mobile gaming.</p>
+            </div>
+            <div class="game-card" data-video="GAMES-PLAYBACK/NFS PB.mp4" data-text="Embark on a story-driven adventure with explosive missions and fast-paced action in the city of Fortune Valley.">
+                <img src="NFS/NFS PB.jpg" alt="Payback">
+                <h3>Need for Speed: Payback (2017)</h3>
+                <p>Embark on a story-driven adventure with explosive missions and fast-paced action in the city of Fortune Valley.</p>
+            </div>
+            <div class="game-card" data-video="GAMES-PLAYBACK/NFS HEAT.mp4" data-text="Race by day and risk it all by night in this electrifying battle for street racing supremacy.">
+                <img src="NFS/NFS HEAT.jpg" alt="Heat">
+                <h3>Need for Speed: Heat (2019)</h3>
+                <p>Race by day and risk it all by night in this electrifying battle for street racing supremacy.</p>
+            </div>
+            <div class="game-card" data-video="GAMES-PLAYBACK/NFS REM.mp4" data-text="Relive the thrilling cop vs. racer chases with enhanced visuals and cross-platform multiplayer.">
+                <img src="NFS/NFS REMASTERD.jpg" alt="Hot Pursuit Remastered">
+                <h3>Need for Speed: Hot Pursuit Remastered (2020)</h3>
+                <p>Relive the thrilling cop vs. racer chases with enhanced visuals and cross-platform multiplayer.</p>
+            </div>
+            <div class="game-card" data-video="GAMES-PLAYBACK/NFS UB.mp4" data-text="Push the limits of speed and style in a visually unique world with a fresh take on street racing.">
+                <img src="NFS/NFS UNB.jpg" alt="Unbound">
+                <h3>Need for Speed Unbound (2022)</h3>
+                <p>Push the limits of speed and style in a visually unique world with a fresh take on street racing.</p>
+            </div>
+        </div>
+    </section>
+
+<div id="videoModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <video id="modalVideo" controls>
+            <source src="" type="video/mp4">
+        </video>
+        <p id="modalText"></p>
+    </div>
+</div>
+
+    <footer>
+        <p>&copy; 2024 Need for Speed. All Rights Reserved.</p>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>

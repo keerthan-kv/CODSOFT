@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Ford</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Helvetica Black Condensed';
+        }
+
+        #image-container {
+            position: fixed;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            z-index: -1;
+        }
+
+        #image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        #overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.437);
+            color: #fff;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        #header {
+            position: relative;
+            padding: 20px;
+            color: white;
+            text-align: center;
+            z-index: 1;
+            background-color: black;
+        }
+
+        #header img {
+            position: absolute;
+            top: 10px;
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
+        }
+
+        #header img.left {
+            left: 20px;
+            width: 120px;
+            height: 47px;
+        }
+
+        #header img.right {
+            right: 40px;
+            width: 108px;
+            height: 45px;
+        }
+
+        #text-lines {
+            color: white;
+            text-align: left;
+            padding: 15px;
+            margin-top: 300px;
+        }
+
+        #text-lines p {
+            margin: 0;
+            line-height: 1.5;
+        }
+
+        #view-spec-button {
+            display: inline-block;
+            padding: 15px 30px;
+            background: black;
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+            cursor: pointer;
+            margin-top: 40px;
+            margin-bottom: 100px    ;
+        }
+
+        #image-gallery {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 150px;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            margin: 10px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+            border-radius: 5px;
+        }
+
+        .gallery-item img {
+            width: 300px;
+            height: auto;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .gallery-text {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            padding: 5px;
+            background: rgba(23, 22, 22, 0.7);
+            color: white;
+            text-align: center;
+        }
+
+        #text-box {
+            background: black;
+            color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+            margin-top: 20px;
+        }
+
+        #car-specifications {
+            margin-top: 20px;
+           
+            border-collapse: collapse;
+            width: 90%;
+            margin: 0 auto;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        #car-specifications th,
+        #car-specifications td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid white;
+            color: white;
+        }
+
+        #car-specifications th {
+            background: rgba(0, 0, 0, 0.455);
+        }
+
+        #navigate-button {
+            display: inline-block;
+            width: 150px;
+            height: 50px;
+            background: black;
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+            border: none;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+            cursor: pointer;
+            margin-top: 20px;
+            margin-bottom: 100px;
+            margin-left: auto;
+            text-align: center;
+            line-height: 40px;
+        }
+
+        /* Footer Styles */
+        #footer {
+            background: black;
+            color: white;
+            text-align: center;
+            margin-top: 20px;
+            padding: 20px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="image-container">
+        <img id="image" src="ford_bc.jpeg" alt="Background Image">
+        <div id="overlay"></div>
+    </div>
+
+    <div id="header">
+        <img src="ford_logo.png" alt="Left Logo" class="left">
+        <img src="ford_logo2.png" alt="Right Logo" class="right">
+        <h1>Ford GT40 (1964-1969)</h1>
+    </div>
+
+    <div id="text-lines">
+        <p style="font-size: 40px;">"BUILT FORD TOUGH TO ME MEANS PERSEVERANCE."</p>
+        <p style="font-size: 20px;">We accept challenges and overcome them with Confidence.</p>
+        <p style="font-size: 20px;">Courage</p>
+        <p style="font-size: 20px;">Optimism</p>
+    </div>
+
+    <a href="#8" id="view-spec-button">View Specifications ↓</a>
+
+    <div id="image-gallery">
+        <!-- Add images for the gallery -->
+        <div class="gallery-item">
+            <img src="ford_prod.jpeg" alt="Gallery 1">
+            <div class="gallery-text";>The production numbers varied for each version, and a limited number of road-going GT40s were also produced for homologation purposes.
+                Approximately 87 GT40 Mk I cars were produced.</div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="ford_chas.jpeg" alt="Gallery 2">
+            <div class="gallery-text";>The chassis of the GT40 was a monocoque design, utilizing a lightweight aluminum structure.
+                The chassis design evolved through different versions to improve aerodynamics, handling, and overall performance.</div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="ford_eng.jpeg" alt="Gallery 4">
+            <div class="gallery-text";>TInitially, the GT40 was powered by a Ford 4.2-liter V8 engine.
+                As the program evolved, the engine size increased, and the GT40 became synonymous with the 7.0-liter (427 cubic inches) V8 engine.
+               </div>
+        </div>
+        <div class="gallery-item">
+            <img src="ford_inter.jpeg" alt="Gallery 4">
+            <div class="gallery-text";>It featured bucket seats, a minimalist dashboard with essential gauges, and a steering wheel designed for optimal control.
+                Road-going versions had slightly more comfort-oriented interiors compared to their racing counterparts.</div>
+        </div>
+
+        <!-- Add more gallery items as needed -->
+    </div>
+
+    <br><br>
+
+    <table id="car-specifications">
+        <tr>
+            <th>Feature</th>
+            <th>Specification</th>
+        </tr>
+        <tr>
+            <td>Engine</td>
+            <td>Type: Ford 90-degree V8<br>
+                Displacement: 4.7 liters (289 cubic inches)<br>
+                Power: Approximately 335 horsepower</td>
+        </tr>
+        <tr>
+            <td>Performance:</td>
+            <td>Top Speed: Approximately 165 mph (265 km/h)<br>
+                0 to 60 mph: Approximately 5.3 seconds
+            </td>
+        </tr>
+        <tr>
+        <td>Chassis and Body:</td>
+        <td>Chassis: Steel monocoque with aluminum panels
+        </td>
+        </tr>
+        <tr>
+            <td>Suspension:</td>
+            <td>Suspension: Independent suspension with coil springs and wishbones
+            </td>
+            </tr>
+                <tr>
+                    <td>Dimensions:</td>
+                    <td>
+                        Length: Approximately 4.14 meters (163 inches)<br>
+Width: Approximately 1.78 meters (70 inches)<br>
+Height: Approximately 1.02 meters (40 inches)<br>
+Wheelbase: Approximately 2.34 meters (92 inches)
+                    </td>
+                    </tr>
+
+        
+
+        <!-- Add more rows as needed -->
+    </table>
+
+    <br><br><br><br>
+
+    <button id="navigate-button" onclick="window.location.href='forms.html'">TEST DRIVE</button>
+
+    <div id="footer">
+        &copy; 2024 DREAMDRIVE. All rights reserved.
+    </div>
+
+    <script>
+        var currentImage = 0;
+
+        function showImage(index) {
+            var images = document.querySelectorAll("#image-gallery img");
+            images[currentImage].style.transform = "scale(1)";
+            currentImage = (index + images.length) % images.length;
+            images[currentImage].style.transform = "scale(1.1)";
+        }
+
+        function nextImage() {
+            showImage(currentImage + 1);
+        }
+
+        function prevImage() {
+            showImage(currentImage - 1);
+        }
+    </script>
+
+</body>
+
+</html>

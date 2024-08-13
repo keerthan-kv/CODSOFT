@@ -1,0 +1,467 @@
+body {
+    margin: 0;
+    font-family: 'Bebas Neue', Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
+}
+
+header {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.hero-text h1 {
+    font-size: 4rem;
+    margin: 0;
+    font-family: 'Bebas Neue', Arial, sans-serif;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.hero-text p {
+    font-size: 1.5rem;
+    font-family: 'Bebas Neue', Arial, sans-serif;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.hero-text:hover h1,
+.hero-text:hover p {
+    transform: scale(1.1);
+    color: #ff4500;
+}
+
+nav {
+    background-color: #111;
+    padding: 1rem;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ff5e00;
+}
+
+
+.card-grid {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.card {
+    background-color: #222;
+    padding: 1rem;
+    border-radius: 10px;
+    width: 300px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(255, 94, 0, 0.5);
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.card h3 {
+    font-size: 2rem;
+    margin: 1rem 0;
+}
+
+.card p {
+    font-size: 1rem;
+}
+
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+#contact-form input, #contact-form textarea {
+    width: 100%;
+    padding: 1rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+    font-size: 1rem;
+    outline: none;
+}
+
+#contact-form button {
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff5e00;
+    color: #fff;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#contact-form button:hover {
+    background-color: #e04d00;
+}
+
+
+
+.section {
+    padding: 2rem;
+    text-align: center;
+}
+
+.game-grid, .car-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.game-card, .car-card {
+    background-color: #222;
+    padding: 1rem;
+    border-radius: 10px;
+    width: 300px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.game-card:hover, .car-card:hover {
+    transform: scale(1.05);
+    background-color: #333;
+}
+
+.game-card img, .car-card img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.car-card:hover img {
+    transform: scale(1.1);
+    opacity: 0.8;
+}
+
+footer {
+    background-color: #111;
+    padding: 1rem;
+    text-align: center;
+}
+
+/* Modal Styles */
+
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 100;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.9);
+}
+
+.modal-content {
+    background-color: #222;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 700px;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+}
+
+.modal-content video {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.modal-content p {
+    color: #fff;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.modal-content img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    color: #fff;
+    font-size: 35px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-button {
+    color: #aaa;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .hero-text h1 {
+        font-size: 3rem;
+    }
+
+    .hero-text p {
+        font-size: 1.2rem;
+    }
+
+    .game-card, .car-card {
+        width: 100%;
+    }
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 100;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.9);
+}
+
+.modal-content {
+    background-color: #222;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 700px;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+}
+
+.modal-content img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.close-button {
+    color: #aaa;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* New styles for modal images */
+
+.modal-images {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.modal-images img {
+    width: 45%;
+    border-radius: 10px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    cursor: pointer;
+}
+
+.modal-images img:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
+}
+
+.modal-images p {
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    .hero-text h1 {
+        font-size: 3rem;
+    }
+
+    .hero-text p {
+        font-size: 1.2rem;
+    }
+
+    .car-card {
+        width: 100%;
+    }
+
+    .modal-images img {
+        width: 100%;
+    }
+}
+
+/* games video popup */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-content {
+    position: relative;
+    margin: 10% auto;
+    padding: 20px;
+    width: 80%;
+    max-width: 700px;
+    background-color: #000;
+    border-radius: 10px;
+}
+
+.modal-content video {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.modal-content p {
+    color: #fff;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    color: #fff;
+    font-size: 35px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+}
+
+
+
+/* Multimedia Section */
+.video-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    padding: 2rem 0;
+}
+
+.video-item {
+    width: 80%;
+    max-width: 800px;
+}
+
+.video-item video {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.video-item video:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(255, 94, 0, 0.5);
+}
+
+.video-item p {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+    color: #ff5e00;
+}

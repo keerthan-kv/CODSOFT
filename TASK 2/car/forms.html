@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Showroom Booking</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background-image: url('https://i.pinimg.com/564x/4f/3f/89/4f3f894cfed936ae814926287e64649c.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            font-family: 'Helvetica Black Condensed';
+        }
+
+        #booking-form {
+            width: 60%;
+            margin: 50px auto;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 36px;
+            margin-top: 20px;
+        }
+
+        .form-box {
+            margin-bottom: 20px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .form-box:hover {
+            transform: scale(1.05);
+        }
+
+        label {
+            display: block;
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+
+        input,
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        button {
+            background: #007BFF;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background: #0056b3;
+        }
+
+        #reset-btn {
+            background: #dc3545;
+            margin-left: 10px;
+        }
+
+        #reset-btn:hover {
+            background: #a52d38;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="booking-form">
+        <h1>Car Showroom Test Drive Booking</h1>
+        <form action="#" method="post">
+            <div class="form-box">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="form-box">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-box">
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+
+            <div class="form-box">
+                <label for="car-model">Car Model:</label>
+                <input type="text" id="car-model" name="car-model" required>
+            </div>
+
+            <div class="form-box">
+                <label for="date">Preferred Date:</label>
+                <input type="date" id="date" name="date" required>
+            </div>
+
+            <div class="form-box">
+                <label for="time">Preferred Time:</label>
+                <select id="time" name="time" required>
+                    <option value="10:00 AM">10:00 AM</option>
+                    <option value="02:00 PM">02:00 PM</option>
+                    <option value="04:30 PM">04:30 PM</option>
+                </select>
+            </div>
+
+            <div class="form-box">
+                <button type="submit">Submit</button>
+                <button type="reset" id="reset-btn">Reset</button>
+            </div>
+        </form>
+    </div>
+
+</body>
+
+</html>
